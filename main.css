@@ -48,7 +48,7 @@
   margin-right: 10px;
 }
 
-.delete {
+.style {
   background-color: rgb(77, 94, 187);
 }
 
@@ -58,7 +58,7 @@
 }
 
 .edit_block {
-  /* display: none; */
+  display: none;
   height: 100%;
 }
 
@@ -288,4 +288,8 @@
 
 .show {
   display: block;
+}
+
+.hide {
+  display: none;
 }
