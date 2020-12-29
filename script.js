@@ -17,3 +17,19 @@ getS('.style').onclick = function () {
     getS('.style_block_wrapper').classList.add('show')
 
 }
+
+getS('.colors_button').addEventListener('click', function () {
+    getS('.color_div_hiden').classList.toggle('show')
+})
+getS('.colors_button2').addEventListener('click', function () {
+    getS('.color_div_hiden').classList.toggle('show')
+})
+
+function fontSize() {
+    getS('.top_container').style.fontSize = event.target.value;
+}
+
+let fontFamily = document.getElementById('font_family');
+fontFamily.onchange = function (e) {
+    getS('.top_container').style.fontFamily = this.value;
+}

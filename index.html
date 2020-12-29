@@ -33,40 +33,75 @@
         <div class="style_block_wrapper">
           <div class="style_block">
             <div class="left_style_block">
-              <form name="style">
+              <form>
                 <div class="form_div">
                   <h3 class="form_title">Font size</h3>
 
-                  <input type="radio" id="twelve" name="radio" />
+                  <input
+                    type="radio"
+                    onclick="fontSize()"
+                    id="twelve"
+                    name="radio"
+                    value="12px"
+                  />
                   <label for="twelve">12px</label>
 
-                  <input type="radio" id="twelve" name="radio" class="radio" />
+                  <input
+                    type="radio"
+                    onclick="fontSize()"
+                    id="fourteen"
+                    name="radio"
+                    class="radio"
+                    value="14px"
+                    checked
+                  />
                   <label for="twelve">14px</label>
 
-                  <input type="radio" id="twelve" name="radio" class="radio" />
+                  <input
+                    type="radio"
+                    onclick="fontSize()"
+                    id="sixteen"
+                    name="radio"
+                    class="radio"
+                    value="16px"
+                  />
                   <label for="twelve">16px</label>
 
-                  <input type="radio" id="twelve" name="radio" class="radio" />
+                  <input
+                    type="radio"
+                    onclick="fontSize()"
+                    id="eighteen"
+                    name="radio"
+                    class="radio"
+                    value="18px "
+                  />
                   <label for="twelve">18px</label>
 
-                  <input type="radio" id="twelve" name="radio" class="radio" />
+                  <input
+                    type="radio"
+                    onclick="fontSize()"
+                    id="twenty"
+                    name="radio"
+                    class="radio"
+                    value="20px"
+                  />
                   <label for="twelve">20px</label>
                 </div>
                 <div class="form_div">
                   <h3 class="form_title">Font Family</h3>
-                  <select>
-                    <option value="">Choose option</option>
-                    <option value="">cursive</option>
-                    <option value="">fantasy</option>
-                    <option value="">monospace</option>
-                    <option value="">sens-serif</option>
+                  <select id="font_family">
+                    <option value="" selected disabled>Choose option</option>
+                    <option value="cursive">cursive</option>
+                    <option value="fantasy">fantasy</option>
+                    <option value="monospace">monospace</option>
+                    <option value="sens-serif">sens-serif</option>
                   </select>
                 </div>
               </form>
               <div class="form_div">
                 <h3 class="form_title">Colors</h3>
                 <button class="colors_button">Color of text</button>
-                <button class="colors_button">Background Color</button>
+                <button class="colors_button2">Background Color</button>
               </div>
               <div class="form_div">
                 <h3 class="form_title">Style</h3>
@@ -78,17 +113,19 @@
                 </form>
               </div>
             </div>
-            <div class="right_style_block">
-              <div class="main_color_div">
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
-                <div class="color_div_item"></div>
+            <div class="color_div_hiden">
+              <div class="right_style_block">
+                <div class="main_color_div">
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                  <div class="color_div_item"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -121,14 +158,18 @@
             <div class="choose_container_item">
               <input
                 type="radio"
-                id="radio_choose"
+                id="radio_choose_table"
                 name="radio_choose"
                 name="radio_choose"
               />
               <label for="radio_choose">Table</label>
             </div>
             <div class="choose_container_item">
-              <input type="radio" id="radio_choose1" name="radio_choose" />
+              <input
+                type="radio"
+                id="radio_choose_table1"
+                name="radio_choose"
+              />
               <label for="radio_choose1">List</label>
             </div>
           </div>
@@ -155,7 +196,7 @@
             <label for="width_of_TD">Width of TD</label>
             <input
               type="text"
-              id="width_of_TD"
+              id="width_of_TD2"
               class="choose_container_item_input"
             />
           </div>
@@ -165,7 +206,7 @@
               <label for="width_of_border">Width of border</label>
               <input
                 type="text"
-                id="width_of_boeder"
+                id="width_of_border"
                 class="table_border_div_input_item"
               />
             </div>
@@ -201,14 +242,14 @@
             <div class="choose_container_item">
               <input
                 type="radio"
-                id="radio_choose"
+                id="radio_choose_list"
                 name="radio_choose"
                 name="radio_choose"
               />
               <label for="radio_choose">Table</label>
             </div>
             <div class="choose_container_item">
-              <input type="radio" id="radio_choose1" name="radio_choose" />
+              <input type="radio" id="radio_choose_list2" name="radio_choose" />
               <label for="radio_choose1">List</label>
             </div>
           </div>
