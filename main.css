@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.first_container {
+  height: 100%;
+  /* display: none; */
+}
+
+.block {
+  width: 90%;
+  height: 42%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 3px solid grey;
+  border-radius: 4px;
+  background-color: cadetblue;
+}
+
+.button_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.edit {
+  background-color: rgb(81, 201, 91);
+  margin-right: 10px;
+}
+
+.delete {
+  background-color: rgb(77, 94, 187);
+}
+
+.bottom_container {
+  height: 48%;
+  padding: 25px;
+}
+
+.edit_block {
+  /* display: none; */
+  height: 100%;
+}
+
+.edit_block_textarea {
+  width: 100%;
+  height: 85%;
+  padding: 10px 15px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: grey;
+  resize: none;
+}
+
+.edit_block_btn {
+  display: flex;
+  margin-top: 10px;
+}
+
+.add {
+  margin-right: 10px;
+  background-color: rgb(204, 193, 36);
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.save {
+  background-color: rgb(184, 49, 94);
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.style_block {
+  display: none;
+  height: 100%;
+  /* display: flex; */
+}
+
+.radio {
+  margin-right: 10px;
+}
+
+.form_title {
+  margin-bottom: 5px;
+}
+
+.form_div {
+  margin-bottom: 10px;
+}
+
+.left_style_block {
+  width: 50%;
+}
+
+.right_style_block {
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.colors_button {
+  background-color: lightblue;
+  padding: 5px 15px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.main_color_div {
+  width: 210px;
+  height: 210px;
+  background-color: indigo;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color_div_item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+}
+
+.color_div_item:nth-child(1) {
+  background-color: blue;
+}
+
+.color_div_item:nth-child(2) {
+  background-color: rgb(233, 141, 22);
+}
+
+.color_div_item:nth-child(3) {
+  background-color: rgb(19, 167, 27);
+}
+
+.color_div_item:nth-child(4) {
+  background-color: rgb(214, 18, 18);
+}
+
+.color_div_item:nth-child(5) {
+  background-color: rgb(19, 19, 20);
+}
+
+.color_div_item:nth-child(6) {
+  background-color: rgb(45, 187, 212);
+}
+
+.color_div_item:nth-child(7) {
+  background-color: rgb(24, 180, 37);
+}
+
+.color_div_item:nth-child(8) {
+  background-color: rgb(149, 15, 226);
+}
+
+.color_div_item:nth-child(9) {
+  background-color: rgb(119, 108, 90);
+}
+
+.choose_container {
+  display: none;
+  width: 90%;
+  height: 30%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 3px solid grey;
+  border-radius: 4px;
+  background-color: cadetblue;
+}
+
+.choose_container_table {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 3px solid grey;
+  border-radius: 4px;
+  background-color: cadetblue;
+}
+
+.choose_container_list {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 3px solid grey;
+  border-radius: 4px;
+  background-color: cadetblue;
+}
+
+.choose_container_table_flex {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.choose_container form {
+  display: flex;
+}
+
+.choose_container_title {
+  margin-bottom: 20px;
+}
+
+.choose_container_item {
+  margin-right: 20px;
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.choose_container_form_div {
+  margin-bottom: 25px;
+}
+
+.form_div_title {
+  margin-bottom: 20px;
+}
+
+.btn_submit {
+  display: block;
+  background-color: rgb(93, 93, 161);
+  padding: 10px 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.table_border_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_border_div_item {
+  margin-right: 20px;
+}
+
+.choose_container_item_input {
+  width: 80%;
+  height: 30px;
+}
+
+.table_border_div_input_item {
+  width: 100px;
+  height: 30px;
+}
+
+.choose_container_list_li_margin {
+  margin-right: 35px;
+}
+
+.list_btn {
+  display: block;
+  background-color: rgb(37, 161, 120);
+  padding: 10px 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.choose_container_item_input {
+  width: 200px;
+  height: 30px;
+}
+
+.show {
+  display: block;
+}
