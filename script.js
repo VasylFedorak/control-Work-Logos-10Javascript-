@@ -34,6 +34,62 @@ getS(".main_color_div2").addEventListener("click", function (event) {
   ).backgroundColor;
 });
 
+getS(".add").onclick = function () {
+  getS(".first_container").classList.add("hide");
+  getS(".choose_container").classList.add("show");
+};
+
+document.getElementById("radio_choose").addEventListener("click", function () {
+  if (event.target.checked) {
+    getS(".choose_container_table").classList.add("show");
+    getS(".choose_container").classList.remove("show");
+  }
+});
+
+document.getElementById("radio_choose2").addEventListener("click", function () {
+  if (event.target.checked) {
+    getS(".choose_container_list").classList.add("show");
+    getS(".choose_container").classList.remove("show");
+  }
+});
+document
+  .getElementById("radio_choose_table1")
+  .addEventListener("click", function () {
+    if (event.target.checked) {
+      getS(".choose_container_list").classList.add("show");
+      getS(".choose_container_table").classList.remove("show");
+      event.target.checked = false
+    }
+  });
+document
+  .getElementById("radio_choose_table")
+  .addEventListener("click", function () {
+    if (event.target.checked) {
+      getS(".choose_container_table").classList.add("show");
+      getS(".choose_container_list").classList.remove("show");
+      event.target.checked = false
+    }
+  });
+
+document
+  .getElementById("radio_choose_list")
+  .addEventListener("click", function () {
+    if (event.target.checked) {
+      getS(".choose_container_table").classList.add("show");
+      getS(".choose_container_list").classList.remove("show");
+      event.target.checked = false
+    }
+  });
+document
+  .getElementById("radio_choose_list2")
+  .addEventListener("click", function () {
+    if (event.target.checked) {
+      getS(".choose_container_list").classList.add("show");
+      getS(".choose_container_table").classList.remove("show");
+      event.target.checked = false
+    }
+  });
+
 function fontSize() {
   getS(".top_container").style.fontSize = event.target.value;
 }
@@ -45,6 +101,7 @@ function fontWeight() {
     getS(".top_container").classList.remove("bold");
   }
 }
+
 function fontStyle() {
   if (event.target.checked) {
     getS(".top_container").classList.add("cursive");
