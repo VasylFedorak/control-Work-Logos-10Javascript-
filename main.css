@@ -125,14 +125,20 @@
 
 .color_div_hiden {
   display: none;
+  width: 50%;
+  height: 100%;
+}
+
+.color_div_hiden2 {
+  display: none;
+  width: 50%;
+  height: 100%;
 }
 
 .right_style_block {
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 50%;
-  height: 100%;
 }
 
 .colors_button {
@@ -150,11 +156,19 @@
 }
 
 .main_color_div {
+  display: flex;
+  flex-wrap: wrap;
   width: 210px;
   height: 210px;
   background-color: indigo;
+}
+
+.main_color_div2 {
   display: flex;
   flex-wrap: wrap;
+  width: 210px;
+  height: 210px;
+  background-color: rgb(23, 162, 197);
 }
 
 .color_div_item {
@@ -313,4 +327,12 @@
 
 .hide {
   display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cursive {
+  font-style: italic;
 }
