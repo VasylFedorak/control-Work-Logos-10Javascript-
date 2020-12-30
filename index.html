@@ -1,307 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control work</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
 
-  <body>
-    <div class="main_container">
-      <div class="first_container">
-        <div class="block top_container">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="button_block">
-          <button class="btn edit">Edit</button>
-          <button class="btn style">Style</button>
-        </div>
-        <div class="block bottom_container">
-          <div class="edit_block">
-            <textarea class="edit_block_textarea"></textarea>
-            <div class="edit_block_btn">
-              <button class="btn add">Add</button>
-              <button class="btn save">Save</button>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control work</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="first_container">
+      <div class="block top_container">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="button_block">
+        <button class="btn edit">Edit</button>
+        <button class="btn style">Style</button>
+      </div>
+      <div class="block bottom_container">
+        <div class="edit_block">
+          <textarea class="edit_block_textarea"></textarea>
+          <div class="edit_block_btn">
+            <button class="btn add">Add</button>
+            <button class="btn save">Save</button>
           </div>
         </div>
-        <div class="style_block_wrapper">
-          <div class="style_block">
-            <div class="left_style_block">
+      </div>
+      <div class="style_block_wrapper">
+        <div class="style_block">
+          <div class="left_style_block">
+            <form>
+              <div class="form_div">
+                <h3 class="form_title">Font size</h3>
+
+                <input type="radio" onclick="fontSize()" id="twelve" name="radio" value="12px" />
+                <label for="twelve">12px</label>
+
+                <input type="radio" onclick="fontSize()" id="fourteen" name="radio" class="radio" value="14px"
+                  checked />
+                <label for="twelve">14px</label>
+
+                <input type="radio" onclick="fontSize()" id="sixteen" name="radio" class="radio" value="16px" />
+                <label for="twelve">16px</label>
+
+                <input type="radio" onclick="fontSize()" id="eighteen" name="radio" class="radio" value="18px " />
+                <label for="twelve">18px</label>
+
+                <input type="radio" onclick="fontSize()" id="twenty" name="radio" class="radio" value="20px" />
+                <label for="twelve">20px</label>
+              </div>
+              <div class="form_div">
+                <h3 class="form_title">Font Family</h3>
+                <select id="font_family">
+                  <option value="" selected disabled>Choose option</option>
+                  <option value="cursive">cursive</option>
+                  <option value="fantasy">fantasy</option>
+                  <option value="monospace">monospace</option>
+                  <option value="sens-serif">sens-serif</option>
+                </select>
+              </div>
+            </form>
+            <div class="form_div">
+              <h3 class="form_title">Colors</h3>
+              <button class="colors_button">Color of text</button>
+              <button class="colors_button2">Background Color</button>
+            </div>
+            <div class="form_div">
+              <h3 class="form_title">Style</h3>
               <form>
-                <div class="form_div">
-                  <h3 class="form_title">Font size</h3>
-
-                  <input
-                    type="radio"
-                    onclick="fontSize()"
-                    id="twelve"
-                    name="radio"
-                    value="12px"
-                  />
-                  <label for="twelve">12px</label>
-
-                  <input
-                    type="radio"
-                    onclick="fontSize()"
-                    id="fourteen"
-                    name="radio"
-                    class="radio"
-                    value="14px"
-                    checked
-                  />
-                  <label for="twelve">14px</label>
-
-                  <input
-                    type="radio"
-                    onclick="fontSize()"
-                    id="sixteen"
-                    name="radio"
-                    class="radio"
-                    value="16px"
-                  />
-                  <label for="twelve">16px</label>
-
-                  <input
-                    type="radio"
-                    onclick="fontSize()"
-                    id="eighteen"
-                    name="radio"
-                    class="radio"
-                    value="18px "
-                  />
-                  <label for="twelve">18px</label>
-
-                  <input
-                    type="radio"
-                    onclick="fontSize()"
-                    id="twenty"
-                    name="radio"
-                    class="radio"
-                    value="20px"
-                  />
-                  <label for="twelve">20px</label>
-                </div>
-                <div class="form_div">
-                  <h3 class="form_title">Font Family</h3>
-                  <select id="font_family">
-                    <option value="" selected disabled>Choose option</option>
-                    <option value="cursive">cursive</option>
-                    <option value="fantasy">fantasy</option>
-                    <option value="monospace">monospace</option>
-                    <option value="sens-serif">sens-serif</option>
-                  </select>
-                </div>
+                <input type="checkbox" id="bold" onclick="fontWeight()" />
+                <label for="bold">Bold</label>
+                <input type="checkbox" id="cursive" onclick="fontStyle()" />
+                <label for="cursive">Cursive</label>
               </form>
-              <div class="form_div">
-                <h3 class="form_title">Colors</h3>
-                <button class="colors_button">Color of text</button>
-                <button class="colors_button2">Background Color</button>
-              </div>
-              <div class="form_div">
-                <h3 class="form_title">Style</h3>
-                <form>
-                  <input type="checkbox" id="bold" onclick="fontWeight()" />
-                  <label for="bold">Bold</label>
-                  <input type="checkbox" id="cursive" onclick="fontStyle()" />
-                  <label for="cursive">Cursive</label>
-                </form>
+            </div>
+          </div>
+          <div class="color_div_hiden">
+            <div class="right_style_block">
+              <div class="main_color_div">
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
               </div>
             </div>
-            <div class="color_div_hiden">
-              <div class="right_style_block">
-                <div class="main_color_div">
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="color_div_hiden2">
-              <div class="right_style_block">
-                <div class="main_color_div2">
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                  <div class="color_div_item"></div>
-                </div>
+          </div>
+          <div class="color_div_hiden2">
+            <div class="right_style_block">
+              <div class="main_color_div2">
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
+                <div class="color_div_item"></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="choose_container">
-        <h2 class="choose_container_title">Choose what You want:</h2>
-        <form>
-          <div class="choose_container_item">
-            <input
-              type="radio"
-              id="radio_choose"
-              name="radio_choose"
-              name="radio_choose"
-            />
-            <label for="radio_choose">Table</label>
-          </div>
-          <div class="choose_container_item">
-            <input type="radio" id="radio_choose2" name="radio_choose" />
-            <label for="radio_choose2">List</label>
-          </div>
-        </form>
-      </div>
-
-      <div class="choose_container_table">
-        <h2 class="choose_container_title">Choose what You want:</h2>
-        <form name="table_form">
-          <div class="choose_container_table_flex">
-            <div class="choose_container_item">
-              <input type="radio" id="radio_choose_table" name="radio_choose" />
-              <label for="radio_choose_table">Table</label>
-            </div>
-            <div class="choose_container_item">
-              <input
-                type="radio"
-                id="radio_choose_table1"
-                name="radio_choose"
-              />
-              <label for="radio_choose_table1">List</label>
-            </div>
-          </div>
-
-          <div class="choose_container_form_div">
-            <label for="tr">Counter TR</label>
-            <input type="text" name="tr" class="choose_container_item_input" />
-          </div>
-          <div class="choose_container_form_div">
-            <label for="td">Counter TD</label>
-            <input type="text" name="td" class="choose_container_item_input" />
-          </div>
-
-          <h3 class="form_div_title">Add style to your table</h3>
-          <div class="choose_container_form_div">
-            <label for="width_of_TD">Width of TD</label>
-            <input
-              type="text"
-              name="td_width"
-              class="choose_container_item_input"
-            />
-          </div>
-          <div class="choose_container_form_div">
-            <label for="width_of_TD">Height of TD</label>
-            <input
-              type="text"
-              name="td_height"
-              class="choose_container_item_input"
-            />
-          </div>
-
-          <div class="table_border_div">
-            <div class="table_border_div_item">
-              <label for="width_of_border">Width of border</label>
-              <input
-                type="text"
-                name="border"
-                class="table_border_div_input_item"
-              />
-            </div>
-            <div class="table_border_div_item">
-              <label for="width_of_border">Type of border</label>
-              <select class="table_border_div_input_item" name="border_select">
-                <option value="">Select type...</option>
-                <option value="solid">solid</option>
-                <option value="dashed">dashed</option>
-                <option value="dotted">dotted</option>
-              </select>
-            </div>
-            <div class="table_border_div_item">
-              <label for="width_of_border">Color of border</label>
-              <select class="table_border_div_input_item" name="border_color">
-                <option value="">Select color...</option>
-                <option value="black">black</option>
-                <option value="grey">grey</option>
-                <option value="light blue">light blue</option>
-                <option value="orange">orange</option>
-              </select>
-            </div>
-          </div>
-          <input
-            type="button"
-            name="btn_table"
-            class="btn_submit"
-            value="Create table"
-          />
-        </form>
-      </div>
-
-      <div class="choose_container_list">
-        <h2 class="choose_container_title">Choose what You want:</h2>
-
-        <div class="choose_container_table_flex">
-          <div class="choose_container_item">
-            <input
-              type="radio"
-              id="radio_choose_list"
-              name="radio_choose"
-              name="radio_choose"
-            />
-            <label for="radio_choose">Table</label>
-          </div>
-          <div class="choose_container_item">
-            <input type="radio" id="radio_choose_list2" name="radio_choose" />
-            <label for="radio_choose1">List</label>
-          </div>
-        </div>
-        <form name="form_list">
-          <div class="choose_container_form_div">
-            <label for="count_li" class="choose_container_list_li_margin"
-              >Count Li</label
-            >
-            <input
-              type="text"
-              id="count_li"
-              class="choose_container_item_input"
-              name="count"
-            />
-          </div>
-          <div class="choose_container_form_div">
-            <label for="type_of_marks">Type of marks</label>
-            <select
-              id="list_style_select"
-              class="choose_container_item_input"
-              name="type"
-            >
-              <option value="circle">circle</option>
-              <option value="disc">disc</option>
-              <option value="square">square</option>
-            </select>
-          </div>
-
-          <input
-            type="button"
-            name="create"
-            class="list_btn"
-            value="Create list"
-          />
-        </form>
       </div>
     </div>
 
-    <script src="./script.js"></script>
-  </body>
+    <div class="choose_container">
+      <h2 class="choose_container_title">Choose what You want:</h2>
+      <form>
+        <div class="choose_container_item">
+          <input type="radio" id="radio_choose" name="radio_choose" name="radio_choose" />
+          <label for="radio_choose">Table</label>
+        </div>
+        <div class="choose_container_item">
+          <input type="radio" id="radio_choose2" name="radio_choose" />
+          <label for="radio_choose2">List</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="choose_container_table">
+      <h2 class="choose_container_title">Choose what You want:</h2>
+      <form name="table_form">
+        <div class="choose_container_table_flex">
+          <div class="choose_container_item">
+            <input type="radio" id="radio_choose_table" name="radio_choose" />
+            <label for="radio_choose_table">Table</label>
+          </div>
+          <div class="choose_container_item">
+            <input type="radio" id="radio_choose_table1" name="radio_choose" />
+            <label for="radio_choose_table1">List</label>
+          </div>
+        </div>
+
+        <div class="choose_container_form_div">
+          <label for="tr">Counter TR</label>
+          <input type="text" name="tr" class="choose_container_item_input" />
+        </div>
+        <div class="choose_container_form_div">
+          <label for="td">Counter TD</label>
+          <input type="text" name="td" class="choose_container_item_input" />
+        </div>
+
+        <h3 class="form_div_title">Add style to your table</h3>
+        <div class="choose_container_form_div">
+          <label for="width_of_TD">Width of TD</label>
+          <input type="text" name="td_width" class="choose_container_item_input" />
+        </div>
+        <div class="choose_container_form_div">
+          <label for="width_of_TD">Height of TD</label>
+          <input type="text" name="td_height" class="choose_container_item_input" />
+        </div>
+
+        <div class="table_border_div">
+          <div class="table_border_div_item">
+            <label for="width_of_border">Width of border</label>
+            <input type="text" name="border" class="table_border_div_input_item" />
+          </div>
+          <div class="table_border_div_item">
+            <label for="width_of_border">Type of border</label>
+            <select class="table_border_div_input_item" name="border_select">
+              <option value="">Select type...</option>
+              <option value="solid">solid</option>
+              <option value="dashed">dashed</option>
+              <option value="dotted">dotted</option>
+            </select>
+          </div>
+          <div class="table_border_div_item">
+            <label for="width_of_border">Color of border</label>
+            <select class="table_border_div_input_item" name="border_color">
+              <option value="">Select color...</option>
+              <option value="black">black</option>
+              <option value="grey">grey</option>
+              <option value="light blue">light blue</option>
+              <option value="orange">orange</option>
+            </select>
+          </div>
+        </div>
+        <input type="button" name="btn_table" class="btn_submit" value="Create table" />
+      </form>
+    </div>
+
+    <div class="choose_container_list">
+      <h2 class="choose_container_title">Choose what You want:</h2>
+
+      <div class="choose_container_table_flex">
+        <div class="choose_container_item">
+          <input type="radio" id="radio_choose_list" name="radio_choose" name="radio_choose" />
+          <label for="radio_choose">Table</label>
+        </div>
+        <div class="choose_container_item">
+          <input type="radio" id="radio_choose_list2" name="radio_choose" />
+          <label for="radio_choose1">List</label>
+        </div>
+      </div>
+      <form name="form_list">
+        <div class="choose_container_form_div">
+          <label for="count_li" class="choose_container_list_li_margin">Count Li</label>
+          <input type="text" id="count_li" class="choose_container_item_input" name="count" />
+        </div>
+        <div class="choose_container_form_div">
+          <label for="type_of_marks">Type of marks</label>
+          <select id="list_style_select" class="choose_container_item_input" name="type">
+            <option value="circle">circle</option>
+            <option value="disc">disc</option>
+            <option value="square">square</option>
+          </select>
+        </div>
+
+        <input type="button" name="create" class="list_btn" value="Create list" />
+      </form>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

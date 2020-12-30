@@ -39,40 +39,49 @@ getS(".add").onclick = function () {
   getS(".choose_container").classList.add("show");
 };
 
+let formList = document.forms["form_list"];
 
-let formList = document.forms['form_list']
+getS(".list_btn").onclick = function () {
+  const countLi = formList.count.value;
+  const typeLi = formList.type.value;
 
-
-getS('.list_btn').onclick = function () {
-  const countLi = formList.count.value
-  const typeLi = formList.type.value
-  console.log('typeLi')
-
-  getS('.edit_block_textarea').value += `<ul style='list-style-type:${typeLi}'>`
+  getS(
+    ".edit_block_textarea"
+  ).value += `<ul style='list-style-type:${typeLi}'>`;
   for (let i = 0; i < countLi; i++) {
-    getS('.edit_block_textarea').value += `<li>item ${i + 1}</li>`
+    getS(".edit_block_textarea").value += `<li>item ${i + 1}</li>`;
   }
-  getS('.edit_block_textarea').value += '</ul>'
-
+  getS(".edit_block_textarea").value += "</ul>";
 
   getS(".choose_container_list").classList.remove("show");
   getS(".first_container").classList.remove("hide");
-}
+};
 
-getS('.btn_submit').onclick = function () {
-  const countTR = table_form.tr.value
-  const countTd = table_form.td.value
-  const tdWidth = table_form.td_width.value
-  const tdHeight = table_form.td_height.value
-  const borderWidth = table_form.border.value
-  const borderStyle = table_form.border_select.value
-  const borderColor = table_form.border_color.value
+getS(".btn_submit").onclick = function () {
+  const countTR = table_form.tr.value;
+  const countTd = table_form.td.value;
+  const tdWidth = table_form.td_width.value;
+  const tdHeight = table_form.td_height.value;
+  const borderWidth = table_form.border.value;
+  const borderStyle = table_form.border_select.value;
+  const borderColor = table_form.border_color.value;
 
+    getS(".edit_block_textarea").value += `<table>`;
+  for (i = 0; i < countTR; i++) {
+    getS(".edit_block_textarea").value += `<tr >`;
+    for (j = 0; j < countTd; j++) {
+      getS(
+        ".edit_block_textarea"
+      ).value += `<td style="width:${tdWidth}px; height:${tdHeight}px;border-collapse:collapse; border:${borderWidth}px ${borderStyle} ${borderColor}">NY</td>`;
+    }
+    getS(".edit_block_textarea").value += `</tr>`;
+  }
 
+  getS(".edit_block_textarea").value += `</table>`;
 
-}
-
-
+  getS(".choose_container_table").classList.remove("show");
+  getS(".first_container").classList.remove("hide");
+};
 
 document.getElementById("radio_choose").addEventListener("click", function () {
   if (event.target.checked) {
@@ -93,7 +102,7 @@ document
     if (event.target.checked) {
       getS(".choose_container_list").classList.add("show");
       getS(".choose_container_table").classList.remove("show");
-      event.target.checked = false
+      event.target.checked = false;
     }
   });
 document
@@ -102,7 +111,7 @@ document
     if (event.target.checked) {
       getS(".choose_container_table").classList.add("show");
       getS(".choose_container_list").classList.remove("show");
-      event.target.checked = false
+      event.target.checked = false;
     }
   });
 document
@@ -111,7 +120,7 @@ document
     if (event.target.checked) {
       getS(".choose_container_list").classList.add("show");
       getS(".choose_container_table").classList.remove("show");
-      event.target.checked = false
+      event.target.checked = false;
     }
   });
 
@@ -121,7 +130,7 @@ document
     if (event.target.checked) {
       getS(".choose_container_table").classList.add("show");
       getS(".choose_container_list").classList.remove("show");
-      event.target.checked = false
+      event.target.checked = false;
     }
   });
 
