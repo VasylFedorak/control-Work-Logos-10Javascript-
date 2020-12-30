@@ -39,6 +39,41 @@ getS(".add").onclick = function () {
   getS(".choose_container").classList.add("show");
 };
 
+
+let formList = document.forms['form_list']
+
+
+getS('.list_btn').onclick = function () {
+  const countLi = formList.count.value
+  const typeLi = formList.type.value
+  console.log('typeLi')
+
+  getS('.edit_block_textarea').value += `<ul style='list-style-type:${typeLi}'>`
+  for (let i = 0; i < countLi; i++) {
+    getS('.edit_block_textarea').value += `<li>item ${i + 1}</li>`
+  }
+  getS('.edit_block_textarea').value += '</ul>'
+
+
+  getS(".choose_container_list").classList.remove("show");
+  getS(".first_container").classList.remove("hide");
+}
+
+getS('.btn_submit').onclick = function () {
+  const countTR = table_form.tr.value
+  const countTd = table_form.td.value
+  const tdWidth = table_form.td_width.value
+  const tdHeight = table_form.td_height.value
+  const borderWidth = table_form.border.value
+  const borderStyle = table_form.border_select.value
+  const borderColor = table_form.border_color.value
+
+
+
+}
+
+
+
 document.getElementById("radio_choose").addEventListener("click", function () {
   if (event.target.checked) {
     getS(".choose_container_table").classList.add("show");
@@ -70,6 +105,15 @@ document
       event.target.checked = false
     }
   });
+document
+  .getElementById("radio_choose_list2")
+  .addEventListener("click", function () {
+    if (event.target.checked) {
+      getS(".choose_container_list").classList.add("show");
+      getS(".choose_container_table").classList.remove("show");
+      event.target.checked = false
+    }
+  });
 
 document
   .getElementById("radio_choose_list")
@@ -77,15 +121,6 @@ document
     if (event.target.checked) {
       getS(".choose_container_table").classList.add("show");
       getS(".choose_container_list").classList.remove("show");
-      event.target.checked = false
-    }
-  });
-document
-  .getElementById("radio_choose_list2")
-  .addEventListener("click", function () {
-    if (event.target.checked) {
-      getS(".choose_container_list").classList.add("show");
-      getS(".choose_container_table").classList.remove("show");
       event.target.checked = false
     }
   });

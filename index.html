@@ -168,7 +168,7 @@
 
       <div class="choose_container_table">
         <h2 class="choose_container_title">Choose what You want:</h2>
-        <form>
+        <form name="table_form">
           <div class="choose_container_table_flex">
             <div class="choose_container_item">
               <input type="radio" id="radio_choose_table" name="radio_choose" />
@@ -186,11 +186,11 @@
 
           <div class="choose_container_form_div">
             <label for="tr">Counter TR</label>
-            <input type="text" id="tr" class="choose_container_item_input" />
+            <input type="text" name="tr" class="choose_container_item_input" />
           </div>
           <div class="choose_container_form_div">
             <label for="td">Counter TD</label>
-            <input type="text" id="td" class="choose_container_item_input" />
+            <input type="text" name="td" class="choose_container_item_input" />
           </div>
 
           <h3 class="form_div_title">Add style to your table</h3>
@@ -198,15 +198,15 @@
             <label for="width_of_TD">Width of TD</label>
             <input
               type="text"
-              id="width_of_TD"
+              name="td_width"
               class="choose_container_item_input"
             />
           </div>
           <div class="choose_container_form_div">
-            <label for="width_of_TD">Width of TD</label>
+            <label for="width_of_TD">Height of TD</label>
             <input
               type="text"
-              id="width_of_TD2"
+              name="td_height"
               class="choose_container_item_input"
             />
           </div>
@@ -216,53 +216,58 @@
               <label for="width_of_border">Width of border</label>
               <input
                 type="text"
-                id="width_of_border"
+                name="border"
                 class="table_border_div_input_item"
               />
             </div>
             <div class="table_border_div_item">
               <label for="width_of_border">Type of border</label>
-              <select class="table_border_div_input_item">
+              <select class="table_border_div_input_item" name="border_select">
                 <option value="">Select type...</option>
-                <option value="">solid</option>
-                <option value="">dashed</option>
-                <option value="">dotted</option>
+                <option value="solid">solid</option>
+                <option value="dashed">dashed</option>
+                <option value="dotted">dotted</option>
               </select>
             </div>
             <div class="table_border_div_item">
               <label for="width_of_border">Color of border</label>
-              <select class="table_border_div_input_item">
+              <select class="table_border_div_input_item" name="border_color">
                 <option value="">Select color...</option>
-                <option value="">black</option>
-                <option value="">grey</option>
-                <option value="">light blue</option>
-                <option value="">orange</option>
+                <option value="black">black</option>
+                <option value="grey">grey</option>
+                <option value="light blue">light blue</option>
+                <option value="orange">orange</option>
               </select>
             </div>
           </div>
-          <input type="button" class="btn_submit" value="Create table" />
+          <input
+            type="button"
+            name="btn_table"
+            class="btn_submit"
+            value="Create table"
+          />
         </form>
       </div>
 
       <div class="choose_container_list">
         <h2 class="choose_container_title">Choose what You want:</h2>
-        <form>
-          <div class="choose_container_table_flex">
-            <div class="choose_container_item">
-              <input
-                type="radio"
-                id="radio_choose_list"
-                name="radio_choose"
-                name="radio_choose"
-              />
-              <label for="radio_choose">Table</label>
-            </div>
-            <div class="choose_container_item">
-              <input type="radio" id="radio_choose_list2" name="radio_choose" />
-              <label for="radio_choose1">List</label>
-            </div>
-          </div>
 
+        <div class="choose_container_table_flex">
+          <div class="choose_container_item">
+            <input
+              type="radio"
+              id="radio_choose_list"
+              name="radio_choose"
+              name="radio_choose"
+            />
+            <label for="radio_choose">Table</label>
+          </div>
+          <div class="choose_container_item">
+            <input type="radio" id="radio_choose_list2" name="radio_choose" />
+            <label for="radio_choose1">List</label>
+          </div>
+        </div>
+        <form name="form_list">
           <div class="choose_container_form_div">
             <label for="count_li" class="choose_container_list_li_margin"
               >Count Li</label
@@ -271,18 +276,28 @@
               type="text"
               id="count_li"
               class="choose_container_item_input"
+              name="count"
             />
           </div>
           <div class="choose_container_form_div">
             <label for="type_of_marks">Type of marks</label>
-            <select id="list_style_select" class="choose_container_item_input">
+            <select
+              id="list_style_select"
+              class="choose_container_item_input"
+              name="type"
+            >
               <option value="circle">circle</option>
               <option value="disc">disc</option>
-              <option value="scuare">square</option>
+              <option value="square">square</option>
             </select>
           </div>
 
-          <input type="button" class="list_btn" value="Create list" />
+          <input
+            type="button"
+            name="create"
+            class="list_btn"
+            value="Create list"
+          />
         </form>
       </div>
     </div>
